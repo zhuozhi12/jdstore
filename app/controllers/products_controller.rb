@@ -6,6 +6,7 @@ before_filter :authenticate_user! , only: [:new, :edit, :create, :update, :destr
 
  end
 
+
  def show
     @product = Product.find(params[:id])
   end
