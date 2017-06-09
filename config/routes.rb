@@ -43,4 +43,5 @@ resources :orders do
 
 
   root 'welcome#index'
+
 end

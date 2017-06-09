@@ -18,3 +18,11 @@
 //= require bootstrap/modal
 //= require bootstrap-sprockets
 //= require_tree .
+$(window).scroll(function () {
+  /*===== Welcome#index - 首页导览列变化 =====*/
+	if ($(this).scrollTop() > 125) {
+		$('#navbar').addClass('scroll_navbar')
+	} else {
+		$('#navbar').removeClass('scroll_navbar')
+	}
+})
