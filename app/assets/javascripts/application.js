@@ -26,3 +26,17 @@ $(window).scroll(function () {
 		$('#navbar').removeClass('scroll_navbar')
 	}
 })
+
+// *======返回顶端设定========*／
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 2500) {
+    $(".goTop").fadeIn(100);
+  } else {
+    $(".goTop").fadeOut(200);
+  }
+
+    $(".goTop").click(
+    function() {
+      $('html,body').scrollTop(0);
+    });
+})

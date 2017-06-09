@@ -5,7 +5,7 @@
      <section class="intro-box">
        <div class="row">
          <div class="col-md-12">
-           <%= image_tag("zz1.jpg") %><!-- 图片位置 -->
+           <%= image_tag("z101.png") %><!-- 图片位置 -->
          </div>
        </div>
      </section>
@@ -96,20 +96,31 @@
      <hr/>
 
      <!--===== 商品列表 =====-->
-
+     <!-- <section class="product-items-box">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <%= link_to products_path do %>
+            <div class="box"><%= image_tag("z1.jpg") %></div>
+            <div class="product-info">
+              <p>两手锅</p>
+              <p>$550</p>
+            </div>
+          <% end %>
+        </div>
+----- -->
      <section class="product-items-box">
        <% @products.each do |product| %>
        <div class="col-xs-12 col-sm-4 col-md-3">
-
          <%= link_to product_path(product) do %>
+         <div class="box">
          <% if product.image.present? %>
-         <%= image_tag(product.image.thumb.url,class:"box") %>
+         <%= image_tag(product.image.thumb.url) %>
          <% else %>
-         <%= image_tag("", class: "box") %>
+         <%= image_tag("") %>
          <% end %>
+         </div>
          <div class="product-info">
-         <p>刺绣礼裙</p>
-         <%= product.title %> ￥ <%= product.price %>
+         <p><%= product.title %> </p>
+         ￥ <%= product.price %>
          </div>
          <% end %>
          </div>
